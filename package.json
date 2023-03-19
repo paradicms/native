@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "dependencies": {
+    "wsrun": "5.2.4"
+  },
+  "scripts": {
+    "build": "wsrun --exclude-missing --prefix --stages build",
+    "build-lib": "wsrun --exclude-missing -p '@paradicms/*' --prefix --stages build",
+    "clean": "wsrun --exclude-missing clean",
+    "clean-lib": "wsrun --exclude-missing -p '@paradicms/*' --prefix clean",
+    "rebuild-lib": "wsrun --exclude-missing -p '@paradicms/*' --prefix --stages rebuild",
+    "watch": "wsrun --exclude-missing --prefix watch",
+    "watch-lib": "wsrun --exclude-missing -p '@paradicms/*' --prefix watch",
+    "test": "wsrun --exclude-missing test",
+    "test-lib": "wsrun --exclude-missing  -p '@paradicms/*' --prefix test"
+  },
+  "workspaces": {
+    "nohoist": [
+      "forms/expo",
+      "forms/@expo/vector-icons"
+    ],
+    "packages": [
+      "app/*",
+      "lib/*"
+    ]
+  },
+  "version": "0.0.0"
+}
