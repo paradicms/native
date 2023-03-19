@@ -1,0 +1,21 @@
+name: Build and test
+on: [push, workflow_dispatch]
+env:
+  NODE_OPTIONS: "--max-old-space-size=4096"
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        path: native
+      - uses: actions/checkout@v3
+        path: paradicms
+      - uses: actions/setup-node@v3
+        with:
+          cache: "yarn"
+          node-version: 16
+      - name: Install dependencies
+        run: native/script/bootstrap
+      - name: Build and test TypeScript
+        run: native/script/cibuild
