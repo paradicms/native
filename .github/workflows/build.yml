@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: "yarn"
+          cache-dependency-path: native/yarn.lock
           node-version: 16
       - name: Install dependencies
         run: native/script/bootstrap
