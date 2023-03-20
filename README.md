@@ -7,7 +7,7 @@ This repository contains experimental native (mobile) applications for Paradicms
 
 * `app/`: React Native apps
 * `lib/`: libraries shared between apps
-* `script/`: standardized scripts for building and testing different parts of the code, following the [Scripts to Rule Them All](https://github.com/github/scripts-to-rule-them-all) pattern
+* `script/`: standardized scripts for building and testing the code, following the [Scripts to Rule Them All](https://github.com/github/scripts-to-rule-them-all) pattern
 
 
 ## First-time setup
