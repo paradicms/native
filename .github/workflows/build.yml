@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        path: native
+        with:
+          path: native
       - uses: actions/checkout@v3
-        path: paradicms
+        with:
+          path: paradicms
       - uses: actions/setup-node@v3
         with:
           cache: "yarn"
