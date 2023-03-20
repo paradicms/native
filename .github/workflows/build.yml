@@ -13,23 +13,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           path: paradicms
+          repository: paradicms/paradicms
       - uses: actions/setup-node@v3
         with:
           cache: "yarn"
           cache-dependency-path: native/yarn.lock
           node-version: 16
-      - name: Replace symlinks with copies
-        run: |
-          ls -flh native/tsconfig.base.json
-          ls -flh paradicms/tsconfig.base.json
-          rm native/tsconfig.base.json native/lib/ts/rdf native/lib/ts/shacl native/lib/ts/shacl-forms native/lib/ts/test native/lib/ts/utilities native/lib/ts/vocabularies
-          cp paradicms/tsconfig.base.json native/tsconfig.base.json
-          cp -p -R paradicms/lib/ts/rdf native/lib/ts/rdf
-          cp -p -R paradicms/lib/ts/shacl native/lib/ts/shacl
-          cp -p -R paradicms/lib/ts/shacl-forms native/lib/ts/shacl-forms
-          cp -p -R paradicms/lib/ts/test native/lib/ts/test
-          cp -p -R paradicms/lib/ts/utilities native/lib/ts/utilities
-          cp -p -R paradicms/lib/ts/vocabularies native/lib/ts/vocabularies
       - name: Install dependencies
         run: native/script/bootstrap
       - name: Build and test TypeScript
