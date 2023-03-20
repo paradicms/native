@@ -1,4 +1,5 @@
 dist/
 *.iml
+*.log
 node_modules/
 __snapshots__/
