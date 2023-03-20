@@ -18,6 +18,7 @@ jobs:
           cache: "yarn"
           cache-dependency-path: native/yarn.lock
           node-version: 16
+      - run: find .
       - name: Install dependencies
         run: native/script/bootstrap
       - name: Build and test TypeScript
