@@ -20,6 +20,7 @@ jobs:
           node-version: 16
       - name: Replace symlinks with copies
         run: |
+          ls -flh native/tsconfig.base.json
           rm native/tsconfig.base.json native/lib/ts/rdf native/lib/ts/shacl native/lib/ts/shacl-forms native/lib/ts/test native/lib/ts/utilities native/lib/ts/vocabularies
           cp paradicms/tsconfig.base.json native/tsconfig.base.json
           cp -p -R paradicms/lib/ts/rdf native/lib/ts/rdf
