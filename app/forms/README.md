@@ -19,14 +19,14 @@ React Native mobile application for creating knowledge graphs using data entry f
     * Add a new instance to view/edit and select it
     * Delete an instance
 * Given a selected instance of a top-level shape
-    * View single-value properties
+    * View single-value imageProperties
         * Connected instance (other top-level shape)
         * Date-time
         * Enum
         * Number
         * String
         * Sub-instance (blank node)
-    * Edit (delete and update) single-value properties
+    * Edit (delete and update) single-value imageProperties
         * Boolean
         * Connected instance (other top-level shape)
         * Date-time
@@ -40,14 +40,14 @@ React Native mobile application for creating knowledge graphs using data entry f
 #### Multi-value property editing
 
 * Given a selected instance of a top-level shape
-    * View multi-value properties
+    * View multi-value imageProperties
         * Connected instance (other top-level shape)
         * Date-time
         * Enum
         * Number
         * String
         * Sub-instance (blank node)
-    * Edit (create, delete, update) multi-value properties
+    * Edit (create, delete, update) multi-value imageProperties
         * Boolean
         * Connected instance (other top-level shape)
         * Date-time
